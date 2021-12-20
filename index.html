@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+ href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+<script src="https://kit.fontawesome.com/d65e853b8d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+       <div class="main" id="blur">
+              
+                <div class='header'>
+                            <p class="p">Tasks <span class="page">List</span></p>
+                            <p class='plus' onclick=addItem()><i class="fa fa-plus-circle"></i> <span class='listtext'>Add Item</span></p>
+                </div>             
+                    <div class="listofblocks"></div>
+                    <div id='noitems'>No Items in todo List</div>
+       </div>
+
+
+       <div class="main" id="listpage">
+            <div class="header">
+                        <p class='back' onclick="back()"><i class="fa fa-chevron-circle-left"></i> Back</p>
+                        <p class="p" id='pagehead'>Trip to Paris</p>
+                        <p class='btn' onclick="addItem()"><i class="fa fa-plus-circle"></i></p> 
+            </div>
+            <div class="todolist_rows">
+                <div class="todoblock">
+                    <p class="card-heading" id='card-heading'>Trip To Paris</p>
+                    <ul id='singleList' style="list-style-type:none;">
+                    </ul>
+                    <div class='edge'>
+                        <button class='removeblock' onclick="removeblock(this)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        <p class='itemadd' onclick="addingitem(this)"><i class="fa fa-plus-circle"></i></p>
+                    </div>
+                </div>
+            </div>
+
+            
+        
+       </div>
+       
+    <div class="col popup" id="popuplist">
+        <div>
+            <p class="newlist">Add List</p>
+        </div>
+        <div>
+            <input type="text" id='entered'>
+        </div>
+        
+        <div>
+            <button onclick="addtodo()">Add</button>
+            <button onclick="addItem()">Close</button>
+        </div>
+        
+    </div>
+       
+    <div class="col popup" id="popupitem">
+        <div>
+            <p class="newlist">Add Item</p>
+        </div>
+        <div>
+            <input type="text" id='entereditem'>
+        </div>
+        
+        <div>
+            <button onclick="addtodoitem()">Add</button>
+            <button onclick="addingitem()">Close</button>
+        </div>
+        
+    
+        
+    </div>
+
+       
+
+  <script src="index.js"></script>
+</body>
+</html>
